@@ -24,3 +24,38 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.font-script {
+  font-family: var(--font-pinyon);
+}
+
+.font-elegant {
+  font-family: var(--font-cormorant);
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(184, 174, 157, 0.22);
+  animation: floatParticle linear infinite;
+}

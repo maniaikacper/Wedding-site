@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Maria i Kacper//Wedding//PL
+BEGIN:VEVENT
+UID:wedding-2026@example.com
+DTSTAMP:20261024T140000Z
+DTSTART:20261024T140000Z
+DTEND:20261025T020000Z
+SUMMARY:Ślub Marii i Kacpra
+DESCRIPTION:Zapraszamy na nasz ślub i wesele.
+LOCATION:Bazylika Katedralna Wniebowzięcia Najświętszej Maryi Panny w Płocku
+END:VEVENT
+END:VCALENDAR
