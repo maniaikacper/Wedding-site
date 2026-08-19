@@ -218,7 +218,7 @@ export default function LuxuryWeddingLanding() {
                   src="/invite-front.png"
                   alt="Wedding invitation"
                   draggable={false}
-                  className="pointer-events-none h-[90%] md:h-[92%] w-auto max-w-full object-contain drop-shadow-[0_40px_120px_rgba(0,0,0,0.22)]"
+                  className="pointer-events-none h-[90%] md:h-[92%] w-auto max-w-full object-contain"
                 />
 
               </div>
@@ -239,7 +239,7 @@ export default function LuxuryWeddingLanding() {
                   src="/invite-back.png"
                   alt="Wedding invitation details"
                   draggable={false}
-                  className="pointer-events-none h-[90%] md:h-[92%] w-auto max-w-full object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.18)]"
+                  className="pointer-events-none h-[90%] md:h-[92%] w-auto max-w-full object-contain"
                 />
 
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
