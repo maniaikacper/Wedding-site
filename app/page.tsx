@@ -428,7 +428,7 @@ export default function LuxuryWeddingLanding() {
             <div className="grid md:grid-cols-2 gap-6">
 
               <a
-                href="https://drive.google.com/drive/folders/1uj8-wOpXjeVpbxAB-78JpTnQeuQdMRAd?usp=sharing"
+                href="https://www.dropbox.com/request/g9tavzphtvvo9hlww61s"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-[32px] border border-[#6b7b5d]/20 bg-white/70 p-10 transition-all duration-500 hover:bg-[#eef2e8] hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]"
