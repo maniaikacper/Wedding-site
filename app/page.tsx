@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ChevronDown } from "lucide-react"
 
 export default function LuxuryWeddingLanding() {
@@ -12,6 +12,8 @@ export default function LuxuryWeddingLanding() {
     seconds: "00",
   })
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [shouldLoadSpotify, setShouldLoadSpotify] = useState(false)
+  const spotifyContainerRef = useRef<HTMLDivElement | null>(null)
 
   const weddingDate = new Date("2026-10-24T16:00:00")
 
@@ -61,6 +63,28 @@ export default function LuxuryWeddingLanding() {
     }, 1000)
 
     return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const spotifyContainer = spotifyContainerRef.current
+
+    if (!spotifyContainer) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadSpotify(true)
+          observer.disconnect()
+        }
+      },
+      {
+        rootMargin: "600px 0px",
+      }
+    )
+
+    observer.observe(spotifyContainer)
+
+    return () => observer.disconnect()
   }, [])
 
   const toggleInvitation = () => {
@@ -396,16 +420,30 @@ export default function LuxuryWeddingLanding() {
               </h2>
             </div>
 
-            <div className="rounded-[32px] border border-[#6b7b5d]/20 bg-white/70 p-4 overflow-hidden shadow-xl">
-
-              <iframe
-                style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/playlist/2p41jmXINRhfNFP6uVY6B0?utm_source=generator"
-                width="100%"
-                height="352"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="eager"
-              />
+            <div
+              ref={spotifyContainerRef}
+              className="rounded-[32px] border border-[#6b7b5d]/20 bg-white/70 p-4 overflow-hidden shadow-xl"
+            >
+              {shouldLoadSpotify ? (
+                <iframe
+                  title="Playlista weselna w Spotify"
+                  style={{ borderRadius: "12px" }}
+                  src="https://open.spotify.com/embed/playlist/2p41jmXINRhfNFP6uVY6B0?utm_source=generator"
+                  width="100%"
+                  height="352"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="eager"
+                />
+              ) : (
+                <div
+                  className="h-[352px] flex items-center justify-center rounded-xl bg-[#eef2e8] text-[#7a1f2b]/60"
+                  role="status"
+                >
+                  <span className="animate-pulse uppercase tracking-[0.25em] text-xs">
+                    Ładowanie playlisty…
+                  </span>
+                </div>
+              )}
 
             </div>
           </div>
