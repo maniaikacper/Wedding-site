@@ -404,7 +404,7 @@ export default function LuxuryWeddingLanding() {
                 width="100%"
                 height="352"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
+                loading="eager"
               />
 
             </div>
