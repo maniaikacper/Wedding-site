@@ -74,7 +74,7 @@ export default function LuxuryWeddingLanding() {
       question:
         "Jakich kolorów nie zakładać, czyli czy obowiązuje dress code?",
       answer:
-        "Bardzo prosimy unikać bieli, écru oraz czerwieni. Elegancki styl mile widziany.",
+        "Bardzo prosimy unikać bieli, écru, czerni oraz czerwieni. Elegancki styl mile widziany.",
     },
     {
       question: "Czy przewidziany jest nocleg?",
@@ -323,7 +323,7 @@ export default function LuxuryWeddingLanding() {
 >
   {rotation === 0
     ? "Otwórz zaproszenie"
-    : "Obróć zaproszenie"}
+    : "Zamknij zaproszenie"}
 </button>
 
       </section>
