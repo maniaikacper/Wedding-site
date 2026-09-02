@@ -108,7 +108,7 @@ export default function LuxuryWeddingLanding() {
     {
       question: "Czy można przyjechać z dziećmi?",
       answer:
-        "Oczywiście — dzieci są mile widziane. Podczas uroczystości weselnej od godziny 19:00 do 22:00 będzie dostępny animator.",
+        "Oczywiście — z radością powitamy dzieci uwzględnione na zaproszeniu. Dla najmłodszych gości podczas przyjęcia, w godzinach 19:00–22:00, będzie dostępny animator.",
     },
     {
       question: "O której zaczyna się ceremonia?",
